@@ -18,11 +18,11 @@ const identitySchema = new mongoose.Schema({
         enum:["male", "female"],
         required:true,
     },
-    is_alive:{
+    isalive:{
         type:Boolean,
         default:true,
     },
-    skin_color:{
+    skincolor:{
         type:String,
     }
 })

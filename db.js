@@ -1,10 +1,14 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // defining URL of MongoDB
-const mongoURL = 'mongodb://localhost:27017/info';
+// const mongoURL = 'process.env.LOCAL_MONGODB_URL';
+const mongoURL= process.env.MONGODB_URL
 
 // setting up MongoDB connection
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURL)
+
 
 const db = mongoose.connection;
 
